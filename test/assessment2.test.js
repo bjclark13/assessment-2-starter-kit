@@ -50,7 +50,7 @@ describe('Car', () => {
         expect(car.engineOn).toBeFalse();
     })
 
-    it('sets engineOn to false when turnCarOff is called', () => {
+    it('fuelLevel is 100 when refillFuel is called', () => {
         const car = new Car(0);
         car.refillFuel();
         expect(car.fuelLevel).toBe(100);
