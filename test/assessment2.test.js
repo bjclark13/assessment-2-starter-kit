@@ -63,4 +63,20 @@ describe('Car', () => {
     it('myCar has a final state of 0 for speed', () => {
         expect(myCar.speed).toBe(0);
     })
+
+    it('runs through test process', () => {
+        const car = new Car(60);
+
+        car.refillFuel();
+        car.turnCarOn();
+        car.accelerate();
+        car.accelerate();
+        car.accelerate();
+        car.brake();
+        car.brake();
+        car.brake();
+        car.turnCarOff();
+        expect(car.engineOn).toBeFalse();
+        expect(car.speed).toBe(0);
+    })
 })
